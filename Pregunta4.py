@@ -28,35 +28,18 @@ class Alumno(object):
         else:
             return("El alumno ha suspendido")
     def __str__(self):
-        return "Nombre: " + self.nombre + " Nota: " + str(self.nota)
+        return "{} ha sacado un {}".format(self.nombre, self.nota)
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-def main():
-
-
-
-if __name__ == "__main__":
-main()
+class test_pregunta2(unittest.TestCase):
+    def test_calificacion(self):
+        alumno1 = Alumno("Juan", 5)
+        alumno2 = Alumno("Pedro", 4)
+        self.assertEqual(alumno1, "El alumno ha aprobado")
+        self.assertEqual(alumno2, "El alumno ha suspendido")
+    def test_str(self):
+        alumno1 = Alumno("Juan", 5)
+        alumno2 = Alumno("Pedro", 4)
+        self.assertEqual(alumno1, "Nombre: Juan Nota: 5")
+        self.assertEqual(alumno2, "Nombre: Pedro Nota: 4")
