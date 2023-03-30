@@ -67,12 +67,17 @@ def Imprimir(listado):
             return "El listado esta vacio"
         # La funcion parar la integraremos en esta funcion
     else:
-        dato1 = listado[1]
-        listado.pop(dato1)
-        Cola.arribo(auxc, dato1)
-        dato = Cola.atencion(auxc)
-        if dato % 10 == 0 and dato < 200:
-            print(dato)
+        dato1 = listado[0]
+        if dato1 > 300:
+            return "El numero es mayor a 300"
+        else:  
+            listado.pop(0)
+            Cola.arribo(auxc, dato1)
+            dato = Cola.atencion(auxc)
+            if dato % 10 == 0 and dato < 200:
+                print(dato)
+            else:
+                pass
         return(Imprimir(listado))
 print(Imprimir([18, 50, 210, 80, 145, 333, 70, 30]))
 
