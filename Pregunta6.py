@@ -18,6 +18,8 @@ class Matrix:
     def Dterminante_itera(self):
         if self.filas == 2 and self.columnas == 2:
             return self.numeros[0][0] * self.numeros[1][1] - self.numeros[0][1] * self.numeros[1][0]
+        elif self.filas != self.columnas:
+            return "No se puede calcular el determinante"
         else:
             determinante = 0
             for i in range(self.columnas):
