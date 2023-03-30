@@ -27,34 +27,5 @@ class Matrix:
                 determinante += (-1) ** i * self.obtener_elementos(0, i) * matriz.Dterminante_itera()
             return determinante
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-def main():
-
-
-
-if __name__ == "__main__":
-main()
+    def Dterminante_recursiva(self):
+        
