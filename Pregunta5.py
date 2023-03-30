@@ -4,7 +4,7 @@ la princesa Leia nos encarga el desarrollo de un algoritmo de encriptación para
 siguientes requerimientos:
 
  cada carácter deberá ser encriptado a ocho caracteres;
- se deberá generar dos tablas hash para encriptar y desencriptar, para los caracteres desde el “ ” hasta el “}” –es decir desde el 
+ se deberá generar dos tablas hash para encriptar y desencriptar, para los caracteres desde el “{” hasta el “}” –es decir desde el 
  32 al 125 de la tabla ASCII.
 """
 class nodoLista(object):
@@ -130,31 +130,3 @@ def quitar2(tabla, dato):
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-def main():
-
-
-
-if __name__ == "__main__":
-main()
