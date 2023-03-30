@@ -28,7 +28,7 @@ class Matrix:
                 determinante += (-1) ** i * self.obtener_numeros(0, i) * matriz.Dterminante_itera()
             return determinante
 
-    def Dterminante_recursiva(self):
+    def Dterminante_recursiva(self, filas, columnas):
         determinante = 0
         if self.filas == 0 and self.columnas == 0:
             print("El calculo del determinante se ha terminado")
