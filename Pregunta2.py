@@ -61,18 +61,20 @@ class Cola(object):
 
 def Imprimir(listado):
     # Para hacerlo de forma recursiva pondremos condiciones: hasta que la lista no este vacia....
-    if listado == None:
-        auxc = Cola()   
+    auxc = Cola()
+    if listado == []:   
         if Cola.cola_vacia(auxc) == True:
             return "El listado esta vacio"
+        # La funcion parar la integraremos en esta funcion
     else:
-        dato1 = listado[0]
+        dato1 = listado[1]
         listado.pop(dato1)
         Cola.arribo(auxc, dato1)
         dato = Cola.atencion(auxc)
         if dato % 10 == 0 and dato < 200:
             print(dato)
         return(Imprimir(listado))
+print(Imprimir([18, 50, 210, 80, 145, 333, 70, 30]))
 
 
 
@@ -103,10 +105,4 @@ def Imprimir(listado):
 
 
 
-def main():
 
-
-
-
-if __name__ == "__main__":
-main()
