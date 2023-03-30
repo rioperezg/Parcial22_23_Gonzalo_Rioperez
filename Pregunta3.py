@@ -26,8 +26,8 @@ def main_experimentacion():
         def test_calificacion(self):
             alumno1 = Alumno("Juan", 5)
             alumno2 = Alumno("Pedro", 4)
-            alumno1.calificacion()
-            alumno2.calificacion()
+            self.assertEqual(alumno1, "El alumno ha aprobado")
+            self.assertEqual(alumno2, "El alumno ha suspendido")
 
 if __name__ == "__main__":
-main()
+    main()
