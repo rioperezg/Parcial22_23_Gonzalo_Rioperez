@@ -7,6 +7,7 @@ Experimentación (0,5 Puntos)
 Crea algunos alumnos
 Prueba a ejecutar el método calificación de cada objeto que has creado
 """
+import unittest
 class Alumno(object):
     def __init__(self, nombre, nota):
         self.nombre = nombre
@@ -20,8 +21,13 @@ class Alumno(object):
 
 
 
-def main():
-
+def main_experimentacion():
+    class unittest(unittest.TestCase):
+        def test_calificacion(self):
+            alumno1 = Alumno("Juan", 5)
+            alumno2 = Alumno("Pedro", 4)
+            alumno1.calificacion()
+            alumno2.calificacion()
 
 if __name__ == "__main__":
 main()
