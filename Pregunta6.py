@@ -39,6 +39,9 @@ class Matrix:
             elif self.filas != self.columnas:
                 return "No se puede calcular el determinante"
             else:
+                submatriz_datos = [Matrix.obtener_fila(fila)[0:col] + Matrix.obtener_fila(fila)[col + 1:] for fila in range(1, Matrix.filas)]
+                submatriz = Matrix(submatriz_datos)
+                determinante += (-1) ** col * Matrix.obtener_elementos(0, col) * Determinante.calcular_recursiva(submatriz)
                 determinante = 0
             
             
