@@ -73,7 +73,7 @@ def Imprimir(listado):
         else:  
             listado.pop(0)
             Cola.arribo(auxc, dato1)
-            dato = Cola.atencion(auxc)
+            dato = Cola.atencion(auxc, dato1)
             if dato % 10 == 0 and dato < 200:
                 print(dato)
             else:
