@@ -41,5 +41,5 @@ class test_pregunta2(unittest.TestCase):
     def test_str(self):
         alumno1 = Alumno("Juan", 5)
         alumno2 = Alumno("Pedro", 4)
-        self.assertEqual(alumno1, "Nombre: Juan Nota: 5")
-        self.assertEqual(alumno2, "Nombre: Pedro Nota: 4")
+        self.assertEqual(alumno1, "Juan ha sacado un 5")
+        self.assertEqual(alumno2, "Pedro ha sacado un 4")
