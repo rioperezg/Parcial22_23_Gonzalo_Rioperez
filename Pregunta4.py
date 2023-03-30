@@ -16,7 +16,19 @@ Implementa el método str y haz que muestre el nombre y la nota del alumno
 Crea algun objeto de la clase Alumno
 Realiza print de esos objetos para visualizar por pantalla la información del str
 """
-
+import unittest
+class Alumno(object):
+    def __init__(self, nombre, nota):
+        self.nombre = nombre
+        self.nota = nota
+        return("El alumno se ha creado con éxito")
+    def calificacion(self):
+        if self.nota >= 5:
+            return("El alumno ha aprobado")
+        else:
+            return("El alumno ha suspendido")
+    def __str__(self):
+        return "Nombre: " + self.nombre + " Nota: " + str(self.nota)
 
 
 
