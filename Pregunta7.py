@@ -115,3 +115,11 @@ class Polinomio(object):
                 pol2 = pol2.sig
                 pol1 = pol1.sig 
         return paux
+    def existe_termino(polinomio, termino):
+        aux = polinomio.termino_mayor
+        while(aux is not None and aux.info.termino > termino):
+            aux = aux.sig
+        if(aux is not None and aux.info.termino == termino):
+            return True
+        else:
+            return False
