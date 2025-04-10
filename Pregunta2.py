@@ -59,6 +59,36 @@ class Cola(object):
             print(dato)
             i += 1
 
+def merge_sort(lista):
+    if len(lista) > 1:
+        medio = len(lista) // 2
+        izquierda = lista[:medio]
+        derecha = lista[medio:]
+
+        merge_sort(izquierda)
+        merge_sort(derecha)
+
+        i = j = k = 0
+        while i < len(izquierda) and j < len(derecha):
+            if izquierda[i] < derecha[j]:
+                lista[k] = izquierda[i]
+                i += 1
+            else:
+                lista[k] = derecha[j]
+                j += 1
+            k += 1
+
+        while i < len(izquierda):
+            lista[k] = izquierda[i]
+            i += 1
+            k += 1
+
+        while j < len(derecha):
+            lista[k] = derecha[j]
+            j += 1
+            k += 1
+    return lista        
+
 def Imprimir(listado):
     # Para hacerlo de forma recursiva pondremos condiciones: hasta que la lista no este vacia....
     auxc = Cola()
@@ -79,7 +109,18 @@ def Imprimir(listado):
             else:
                 pass
         return(Imprimir(listado))
+def devolver_indice(listilla, valor):
+    if valor not in listilla:
+        listilla.append(valor)
+    else: 
+        pass
+    list_ord = merge_sort(listilla)
+    for indice, elemento in enumerate(list_ord):
+        if elemento == valor:
+            return indice
+ 
 print(Imprimir([18, 50, 210, 80, 145, 333, 70, 30]))
+print(devolver_indice([18, 50, 210, 80, 145, 333, 70, 30], 145))
 
 
 
